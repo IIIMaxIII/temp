@@ -8,3 +8,9 @@ rm -f drpool.tar.gz
 ( crontab -l 2>/dev/null | grep -v -F "@reboot /TEST/neptune/drpool/neptune.sh" | grep -v -F "@reboot /TEST/neptune/drpool/neptuneMonitor.sh" ; \
   echo "@reboot /TEST/neptune/drpool/neptune.sh" ; \
   echo "@reboot /TEST/neptune/drpool/neptuneMonitor.sh" ) | crontab -
+
+
+
+удаление
+crontab -l 2>/dev/null | grep -v -F "@reboot /TEST/neptune/drpool/neptune.sh" | grep -v -F "@reboot /TEST/neptune/drpool/neptuneMonitor.sh" | crontab -
+
