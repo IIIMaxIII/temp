@@ -26,8 +26,8 @@ install_drpool() {
       echo "@reboot $MONITOR_FILE" ) | crontab -
 
     # Добавление в /hive/etc/crontab.root, если нет
-    grep -qxF "@reboot $SCRIPT_FILE" "$CRON_FILE" || echo "@reboot $SCRIPT_FILE" >> "$CRON_FILE"
-    grep -qxF "@reboot $MONITOR_FILE" "$CRON_FILE" || echo "@reboot $MONITOR_FILE" >> "$CRON_FILE"
+    grep -qxF "@reboot $SCRIPT_FILE" "$CRON_FILE" || printf "\n@reboot %s\n" "$SCRIPT_FILE" >> "$CRON_FILE"
+    grep -qxF "@reboot $MONITOR_FILE" "$CRON_FILE" || printf "\n@reboot %s\n" "$MONITOR_FILE" >> "$CRON_FILE"
 
     echo "Строки добавлены в cron и $CRON_FILE"
 }
