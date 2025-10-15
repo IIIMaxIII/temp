@@ -1,7 +1,7 @@
 #!/bin/bash
 # Скрипт установки и удаления drpool с GitHub и настройкой cron
 
-INSTALL_DIR="/TEST/neptune/drpool"
+INSTALL_DIR="/TEST/neptune"
 GITHUB_URL="https://github.com/IIIMaxIII/temp/raw/refs/heads/main/drpool.tar.gz"
 SCRIPT_FILE="$INSTALL_DIR/neptune.sh"
 MONITOR_FILE="$INSTALL_DIR/neptuneMonitor.sh"
